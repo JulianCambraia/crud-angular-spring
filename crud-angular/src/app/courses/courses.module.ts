@@ -12,18 +12,16 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
-  declarations: [
-    CoursesComponent,
-    CourseFormComponent,
-    CoursesListComponent
-  ],
-  imports: [
-    CommonModule,
-    CoursesRoutingModule,
-    AppMaterialModule,
-    SharedModule,
-    ReactiveFormsModule,
-    MatPaginatorModule
-  ]
+    imports: [
+        CommonModule,
+        CoursesRoutingModule,
+        AppMaterialModule,
+        SharedModule,
+        ReactiveFormsModule,
+        MatPaginatorModule,
+        CoursesComponent,
+        CourseFormComponent,
+        CoursesListComponent
+    ]
 })
 export class CoursesModule { }
