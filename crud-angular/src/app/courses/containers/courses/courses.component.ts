@@ -12,25 +12,24 @@ import { Course } from '../../model/course';
 import { CoursesService } from '../../services/courses.service';
 import { MatProgressSpinner } from '@angular/material/progress-spinner';
 import { CoursesListComponent } from '../../components/courses-list/courses-list.component';
-import { NgIf, AsyncPipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { MatToolbar } from '@angular/material/toolbar';
 import { MatCard, MatCardContent } from '@angular/material/card';
 
 @Component({
-    selector: 'app-courses',
-    templateUrl: './courses.component.html',
-    styleUrl: './courses.component.scss',
-    standalone: true,
-    imports: [
-        MatCard,
-        MatCardContent,
-        MatToolbar,
-        NgIf,
-        CoursesListComponent,
-        MatPaginator,
-        MatProgressSpinner,
-        AsyncPipe,
-    ],
+  selector: 'app-courses',
+  templateUrl: './courses.component.html',
+  styleUrl: './courses.component.scss',
+  standalone: true,
+  imports: [
+    MatCard,
+    MatCardContent,
+    MatToolbar,
+    CoursesListComponent,
+    MatPaginator,
+    MatProgressSpinner,
+    AsyncPipe,
+  ],
 })
 export class CoursesComponent implements OnInit {
   courses$: Observable<CoursePage> | null = null;
@@ -39,7 +38,6 @@ export class CoursesComponent implements OnInit {
 
   pageIndex = 0;
   pageSize = 10;
-  //@Output() refresh;
 
   displayedColumns = ['_id', 'name', 'category', 'actions'];
 
