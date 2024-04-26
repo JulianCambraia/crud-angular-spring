@@ -8,4 +8,3 @@ services:
       - "MYSQL_USER=myuser"
     ports:
       - "3306:3306"
- 

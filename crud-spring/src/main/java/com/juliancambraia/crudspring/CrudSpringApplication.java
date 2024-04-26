@@ -18,8 +18,8 @@ public class CrudSpringApplication {
 		SpringApplication.run(CrudSpringApplication.class, args);
 	}
 
-	@Profile("dev")
 	@Bean
+	@Profile("test")
 	CommandLineRunner initDatabase(CourseRepository repository) {
 		return args -> {
 			repository.deleteAllInBatch();
